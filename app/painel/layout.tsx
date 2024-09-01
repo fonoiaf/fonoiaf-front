@@ -1,6 +1,6 @@
 'use client'
 
-import AppBar from '@/components/AppBar'
+import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
 import * as React from 'react'
 
@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }: Props) {
 
     return (
         <div>
-            <AppBar toggle={toggleSidebar} />
+            <Header toggle={toggleSidebar} />
             <Sidebar open={open} toggle={toggleSidebar} />
             <main>{children}</main>
         </div>

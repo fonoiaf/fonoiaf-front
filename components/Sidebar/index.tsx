@@ -1,12 +1,18 @@
 'use client'
 
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import { Button } from '@mui/material'
+import DescriptionIcon from '@mui/icons-material/DescriptionOutlined'
+import FaceIcon from '@mui/icons-material/FaceOutlined'
+import GroupIcon from '@mui/icons-material/GroupOutlined'
+import HelpIcon from '@mui/icons-material/HelpCenterOutlined'
+import HomeIcon from '@mui/icons-material/HomeOutlined'
+import MusicNoteIcon from '@mui/icons-material/MusicNoteOutlined'
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibraryOutlined'
+import SettingsIcon from '@mui/icons-material/SettingsOutlined'
+import SpellcheckIcon from '@mui/icons-material/SpellcheckOutlined'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Drawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
-import { useRouter } from 'next/navigation'
 import * as React from 'react'
 import SidebarItem from './item'
 
@@ -14,7 +20,6 @@ interface SidebarItemOptions {
     name: string
     icon: React.ReactNode
     path: string
-    onClick: () => void
 }
 
 interface Props {
@@ -23,71 +28,58 @@ interface Props {
 }
 
 export default function Sidebar({ open, toggle }: Props) {
-    const router = useRouter()
-
     const items: SidebarItemOptions[] = [
         {
             name: 'Home',
-            icon: <InboxIcon />,
+            icon: <HomeIcon />,
             path: '/painel',
-            onClick: () => router.push('/painel'),
         },
         {
             name: 'Palavras',
-            icon: <InboxIcon />,
+            icon: <SpellcheckIcon />,
             path: '/painel/palavras',
-            onClick: () => router.push('/painel/palavras'),
         },
         {
             name: 'Figuras',
-            icon: <InboxIcon />,
+            icon: <PhotoLibraryIcon />,
             path: '/painel/figuras',
-            onClick: () => router.push('/painel/figuras'),
         },
         {
             name: 'Fonemas',
-            icon: <InboxIcon />,
+            icon: <MusicNoteIcon />,
             path: '/painel/fonemas',
-            onClick: () => router.push('/painel/fonemas'),
         },
     ]
     const others: SidebarItemOptions[] = [
         {
             name: 'Pacientes',
-            icon: <InboxIcon />,
+            icon: <FaceIcon />,
             path: '/painel/pacientes',
-            onClick: () => router.push('/painel/pacientes'),
         },
         {
             name: 'Transcricoes',
-            icon: <InboxIcon />,
+            icon: <DescriptionIcon />,
             path: '/painel/transcricoes',
-            onClick: () => router.push('/painel/transcricoes'),
         },
         {
             name: 'Usuarios',
-            icon: <InboxIcon />,
+            icon: <GroupIcon />,
             path: '/painel/usuarios',
-            onClick: () => router.push('/painel/usuarios'),
         },
         {
             name: 'Tutorial',
-            icon: <InboxIcon />,
+            icon: <HelpIcon />,
             path: '/painel/tutorial',
-            onClick: () => router.push('/painel/tutorial'),
         },
         {
             name: 'Configuracoes',
-            icon: <InboxIcon />,
+            icon: <SettingsIcon />,
             path: '/painel/configuracoes',
-            onClick: () => router.push('/painel/configuracoes'),
         },
     ]
 
-    const to = (path: string) => router.push(path)
-
     return (
-        <div>
+        <nav>
             <Drawer open={open} onClose={toggle(false)}>
                 <Box
                     sx={{ width: 250 }}
@@ -107,6 +99,6 @@ export default function Sidebar({ open, toggle }: Props) {
                     </List>
                 </Box>
             </Drawer>
-        </div>
+        </nav>
     )
 }

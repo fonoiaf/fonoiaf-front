@@ -5,12 +5,13 @@ import MailIcon from '@mui/icons-material/Mail'
 import MenuIcon from '@mui/icons-material/Menu'
 import MoreIcon from '@mui/icons-material/MoreVert'
 import NotificationsIcon from '@mui/icons-material/Notifications'
-import AppBarMui from '@mui/material/AppBar'
+import AppBar from '@mui/material/AppBar'
 import Badge from '@mui/material/Badge'
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
+import { useTheme } from '@mui/material/styles'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
@@ -21,35 +22,36 @@ interface Props {
     toggle: (value: boolean) => () => void
 }
 
-export default function AppBar({ toggle }: Props) {
-    const [anchorEl, setAnchorEl] = React.useState<Anchor>(null)
-    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
-        React.useState<Anchor>(null)
+export default function Header({ toggle }: Props) {
+    const theme = useTheme()
 
-    const isMenuOpen = Boolean(anchorEl)
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
+    const [anchor, setAnchor] = React.useState<Anchor>(null)
+    const [mobileAnchor, setMobileAnchor] = React.useState<Anchor>(null)
+
+    const isMenuOpen = Boolean(anchor)
+    const isMobileMenuOpen = Boolean(mobileAnchor)
 
     const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorEl(event.currentTarget)
+        setAnchor(event.currentTarget)
     }
 
     const handleMobileMenuClose = () => {
-        setMobileMoreAnchorEl(null)
+        setMobileAnchor(null)
     }
 
     const handleMenuClose = () => {
-        setAnchorEl(null)
+        setAnchor(null)
         handleMobileMenuClose()
     }
 
     const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-        setMobileMoreAnchorEl(event.currentTarget)
+        setMobileAnchor(event.currentTarget)
     }
 
     const menuId = 'primary-search-account-menu'
     const renderMenu = (
         <Menu
-            anchorEl={anchorEl}
+            anchorEl={anchor}
             anchorOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
@@ -71,7 +73,7 @@ export default function AppBar({ toggle }: Props) {
     const mobileMenuId = 'primary-search-account-menu-mobile'
     const renderMobileMenu = (
         <Menu
-            anchorEl={mobileMoreAnchorEl}
+            anchorEl={mobileAnchor}
             anchorOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
@@ -126,7 +128,7 @@ export default function AppBar({ toggle }: Props) {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBarMui position="static">
+            <AppBar position="static" color="default">
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -193,7 +195,7 @@ export default function AppBar({ toggle }: Props) {
                         </IconButton>
                     </Box>
                 </Toolbar>
-            </AppBarMui>
+            </AppBar>
             {renderMobileMenu}
             {renderMenu}
         </Box>

@@ -3,12 +3,11 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit",
         "source.fixAll": "always",
-        "source.fixAll.eslint": "always" // Change the value to a string
     },
     "files.autoSave": "onWindowChange",
 
     "prettier.enable": true,
-    "eslint.format.enable": true,
+    "eslint.format.enable": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
 
     "javascript.updateImportsOnFileMove.enabled": "always",
