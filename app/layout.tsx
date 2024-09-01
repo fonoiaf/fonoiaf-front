@@ -4,7 +4,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
-import ThemeProvider from '@/components/Theme'
+import Theme from '@/components/Theme'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -14,13 +14,12 @@ export const metadata: Metadata = {
     title: 'Fono IAF',
     description: 'Fonoiaf software',
 }
+
 export const viewport: Viewport = {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 1,
     userScalable: false,
-    // Also supported by less commonly used
-    // interactiveWidget: 'resizes-visual',
 }
 
 interface Props {
@@ -29,9 +28,9 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
     return (
-        <html>
+        <html lang="pt-br">
             <body className={inter.className}>
-                <ThemeProvider>{children}</ThemeProvider>
+                <Theme>{children}</Theme>
             </body>
         </html>
     )

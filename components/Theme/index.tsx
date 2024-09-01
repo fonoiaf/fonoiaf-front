@@ -1,19 +1,20 @@
 'use client'
 
-import { CssBaseline } from '@mui/material'
-import { createContext } from 'react'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import theme from './context'
 
-interface ThemeProviderProps {
+interface Props {
     children: React.ReactNode
 }
 
-export const ThemeContext = createContext({})
-export default function ThemeProvider({ children }: ThemeProviderProps) {
+export default function Theme({ children }: Props) {
+    const currentTheme = theme.light
+
     return (
-        <ThemeContext.Provider value="dark">
+        <ThemeProvider theme={currentTheme}>
             {/* <GlobalStyles styles={globalStyles} /> */}
             <CssBaseline />
             {children}
-        </ThemeContext.Provider>
+        </ThemeProvider>
     )
 }
