@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -23,6 +23,9 @@ export default function Home() {
                 </Typography>
 
                 <Typography variant="body1">{description}</Typography>
+                <Button variant="contained" href="/painel">
+                    Painel
+                </Button>
             </Box>
         </Container>
     )
