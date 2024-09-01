@@ -1,3 +1,4 @@
+import Table from '@/components/Table'
 import { Box, Container, Typography } from '@mui/material'
 import type { Metadata } from 'next'
 
@@ -13,6 +14,8 @@ export default function Fonemas() {
                 <Typography variant="h4" component="h1" gutterBottom>
                     Welcome to Phonemes
                 </Typography>
+
+                <Table />
             </Box>
         </Container>
     )
