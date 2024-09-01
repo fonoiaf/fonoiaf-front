@@ -15,10 +15,16 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
 
-export default function AppBar() {
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+type Anchor = null | HTMLElement
+
+interface Props {
+    toggle: (value: boolean) => () => void
+}
+
+export default function AppBar({ toggle }: Props) {
+    const [anchorEl, setAnchorEl] = React.useState<Anchor>(null)
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
-        React.useState<null | HTMLElement>(null)
+        React.useState<Anchor>(null)
 
     const isMenuOpen = Boolean(anchorEl)
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
@@ -126,11 +132,13 @@ export default function AppBar() {
                         size="large"
                         edge="start"
                         color="inherit"
-                        aria-label="open drawer"
+                        aria-label="open sidebar"
                         sx={{ mr: 2 }}
+                        onClick={toggle(true)}
                     >
                         <MenuIcon />
                     </IconButton>
+
                     <Typography
                         variant="h6"
                         noWrap
@@ -139,12 +147,7 @@ export default function AppBar() {
                     >
                         IAF
                     </Typography>
-                    {/* <div>
-                        <div>
-                            <SearchIcon />
-                        </div>
-                        <input placeholder="Search…" aria-label="search" />
-                    </div> */}
+
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton

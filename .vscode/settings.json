@@ -1,9 +1,9 @@
 {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit",
-      "source.fixAll": "always",
-      "source.fixAll.eslint": "always" // Change the value to a string
+        "source.organizeImports": "explicit",
+        "source.fixAll": "always",
+        "source.fixAll.eslint": "always" // Change the value to a string
     },
     "files.autoSave": "onWindowChange",
 
@@ -12,5 +12,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
 
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-  }
+    "typescript.updateImportsOnFileMove.enabled": "always"
+}

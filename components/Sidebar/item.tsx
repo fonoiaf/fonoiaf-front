@@ -3,18 +3,17 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 
-interface SidebarItemProps {
-    text: string
-    index: number
+interface SidebarItemProps extends React.ButtonHTMLAttributes<HTMLElement> {
+    name: string
     icon: React.ReactNode
 }
 
-export default function SidebarItem({ text, index, icon }: SidebarItemProps) {
+export default function SidebarItem({ name, icon }: SidebarItemProps) {
     return (
-        <ListItem key={index} disablePadding>
+        <ListItem disablePadding>
             <ListItemButton>
                 <ListItemIcon>{icon}</ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={name} />
             </ListItemButton>
         </ListItem>
     )
