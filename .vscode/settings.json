@@ -2,7 +2,7 @@
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
         "source.organizeImports": "explicit",
-        "source.fixAll": "always",
+        "source.fixAll": "explicit",
     },
     "files.autoSave": "onWindowChange",
 
