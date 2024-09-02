@@ -18,8 +18,9 @@ export default function Table({ rows, columns }: Props) {
     const theme = useTheme()
     return (
         // <Box sx={{ height: 400, width: 1 }}>
-        <Box sx={{backgroundColor: theme.palette.background.paper}}>
+        <Box sx={{ bgcolor: theme.palette.background.paper }}>
             <DataGrid
+                sx={{ bgcolor: theme.palette.background.paper }}
                 autoHeight
                 rows={rows}
                 columns={columns}
