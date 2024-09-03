@@ -6,10 +6,14 @@
     },
     "files.autoSave": "onWindowChange",
 
-    "prettier.enable": true,
-    "eslint.format.enable": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "prettier.enable": true,
+    // "eslint.format.enable": false,
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
 
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }
