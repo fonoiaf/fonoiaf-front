@@ -1,7 +1,6 @@
 'use client'
 
 import { Box } from '@mui/material'
-import { useTheme } from '@mui/material/styles'
 import {
     DataGrid,
     GridColDef,
@@ -15,19 +14,21 @@ interface Props {
 }
 
 export default function Table({ rows, columns }: Props) {
-    const theme = useTheme()
+    // const theme = useTheme()
     return (
-        <Box sx={{ bgcolor: theme.palette.background.paper }}>
+        <Box sx={{ bgcolor: 'background.paper' }}>
             <DataGrid
-                sx={{ bgcolor: theme.palette.background.paper }}
+                sx={{
+                    boxShadow: 1,
+                }}
                 autoHeight
                 rows={rows}
                 columns={columns}
+                pageSizeOptions={[5, 10, 20, 30]}
+                slots={{ toolbar: GridToolbar }}
                 initialState={{
                     pagination: { paginationModel: { pageSize: 5 } },
                 }}
-                pageSizeOptions={[5, 10, 20, 30]}
-                slots={{ toolbar: GridToolbar }}
                 slotProps={{
                     toolbar: {
                         showQuickFilter: true,

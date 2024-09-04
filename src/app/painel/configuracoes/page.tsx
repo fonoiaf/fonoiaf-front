@@ -2,7 +2,7 @@ import { Box, Container, Typography } from '@mui/material'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Fono IAF | Paciente',
+    title: 'Fono IAF | Configuracoes',
     description: 'Fonoiaf software',
 }
 

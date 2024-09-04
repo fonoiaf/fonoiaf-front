@@ -4,7 +4,7 @@ import { GridColDef, GridRowsProp } from '@mui/x-data-grid'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Fono IAF | Paciente',
+    title: 'Fono IAF | Fonemas',
     description: 'Fonoiaf software',
 }
 
@@ -16,7 +16,7 @@ type Phoneme = {
 
 export default function Fonemas() {
     
-    const fonemas: Phoneme[] = [
+    const phonemes: Phoneme[] = [
         { id: '1', name: 'p', type: 'consoante' },
         { id: '2', name: 'b', type: 'consoante' },
         { id: '3', name: 't', type: 'consoante' },
@@ -48,23 +48,8 @@ export default function Fonemas() {
         { id: '29', name: 'u', type: 'vogal' },
     ]
 
-    const fonemasEmOrdem = fonemas.sort((a, b) => a.name.localeCompare(b.name))
-
-    // const rows: GridRowsProp<Phoneme>[] = [
-    //     { id: '1', name: 'Hello', type: 'World' },
-    //     { id: '2', name: 'MUI X', type: 'is awesome' },
-    //     { id: '3', name: 'Material UI', type: 'is amazing' },
-    //     { id: '4', name: 'MUI', type: '' },
-    //     { id: '5', name: 'Joy UI', type: 'is awesome' },
-    //     { id: '6', name: 'MUI Base', type: 'is amazing' },
-    // ]
-
-    const rows: GridRowsProp<Phoneme>[] =  fonemasEmOrdem.map((fonema) => {
-        return {
-            id: fonema.id,
-            name: fonema.name,
-            type: fonema.type,
-        } as unknown as GridRowsProp<Phoneme>
+    const rows: GridRowsProp<Phoneme>[] =  phonemes.map((phoneme) => {
+        return phoneme as unknown as GridRowsProp<Phoneme>
     })
 
     const columns: GridColDef[] = [
