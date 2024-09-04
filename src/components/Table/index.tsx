@@ -16,7 +16,7 @@ interface Props {
 export default function Table({ rows, columns }: Props) {
     // const theme = useTheme()
     return (
-        <Box sx={{ bgcolor: 'background.paper' }}>
+        <Box sx={{ bgcolor: 'background.paper', borderRadius: '8px' }}>
             <DataGrid
                 sx={{
                     boxShadow: 1,

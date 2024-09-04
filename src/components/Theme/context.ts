@@ -13,8 +13,10 @@ const paletteLight: PaletteOptions = {
 
 const componentsLight: Components = {
     MuiDataGrid: {
-        defaultProps: {
-            
+        styleOverrides: {
+            root: {
+                borderRadius: '8px'
+            }
         }
     }
 } 
