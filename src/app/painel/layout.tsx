@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header'
 import Sidebar from '@/components/Sidebar'
+import { Container } from '@mui/material'
 import * as React from 'react'
 
 interface Props {
@@ -16,7 +17,11 @@ export default function DashboardLayout({ children }: Props) {
         <div>
             <Header toggle={toggleSidebar} />
             <Sidebar open={open} toggle={toggleSidebar} />
-            <main>{children}</main>
+            <main>
+                <Container>
+                    {children}
+                </Container>
+            </main>
         </div>
     )
 }
