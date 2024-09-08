@@ -4,23 +4,21 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import Link from 'next/link'
 
 interface SidebarItemProps {
     name: string
     path: string
     icon: React.ReactNode
+    isActive: boolean
 }
 
-export default function SidebarItem({ name, path, icon }: SidebarItemProps) {
+export default function SidebarItem({ name, path, icon, isActive }: SidebarItemProps) {
     return (
-        <Link href={path}>
         <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton href={path} selected={isActive}>
                 <ListItemIcon>{icon}</ListItemIcon>
                 <ListItemText primary={name} />
             </ListItemButton>
         </ListItem>
-        </Link>
     )
 }

@@ -127,9 +127,9 @@ export default function Header({ toggle }: Props) {
     )
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" color="inherit">
-                <Toolbar>
+        <Box sx={{ flexGrow: 1 }} id={'box-app-bar'}>
+            <AppBar position="static" color="inherit" id={'app-bar'} sx={{ boxShadow: 'none' }}>
+                <Toolbar id={'app-bar-toolbar'}>
                     <IconButton
                         size="large"
                         edge="start"

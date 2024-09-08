@@ -72,8 +72,7 @@ export default function Figuras() {
     ]
 
     return (
-        <Container>
-            <Box sx={{ my: 4 }}>
+            <Container sx={{ height: '100vh'}} >
                 <Typography variant="h4" component="h1" gutterBottom>
                     Welcome to Figures
                 </Typography>
@@ -91,8 +90,6 @@ export default function Figuras() {
                         </ImageListItem>
                     ))}
                 </ImageList>
-
-            </Box>
-        </Container >
+            </Container>
     )
 }

@@ -29,7 +29,7 @@ interface Props {
 export default function RootLayout({ children }: Props) {
     return (
         <html lang="pt-br">
-            <body className={inter.className} style={{backgroundColor: '#eef2f6'}}>
+            <body className={inter.className}>
                 <Theme>{children}</Theme>
             </body>
         </html>

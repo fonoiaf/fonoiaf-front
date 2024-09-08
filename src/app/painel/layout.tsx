@@ -18,7 +18,14 @@ export default function DashboardLayout({ children }: Props) {
             <Header toggle={toggleSidebar} />
             <Sidebar open={open} toggle={toggleSidebar} />
             <main>
-                <Container>
+                <Container sx={{
+                   backgroundColor: '#eef2f6',
+                   borderTopLeftRadius: '18px',
+                   borderTopRightRadius: '18px',
+                   paddingLeft: '20px',
+                   paddingnRight: '20px',
+                   height: '100vh' // TODO: Check it later
+                }} >
                     {children}
                 </Container>
             </main>

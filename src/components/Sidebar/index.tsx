@@ -13,6 +13,7 @@ import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import Drawer from '@mui/material/Drawer'
 import List from '@mui/material/List'
+import { usePathname } from 'next/navigation'
 import * as React from 'react'
 import SidebarItem from './item'
 
@@ -28,6 +29,7 @@ interface Props {
 }
 
 export default function Sidebar({ open, toggle }: Props) {
+    const pathname = usePathname()
     const items: SidebarItemOptions[] = [
         {
             name: 'Home',
@@ -88,13 +90,13 @@ export default function Sidebar({ open, toggle }: Props) {
                 >
                     <List>
                         {items.map((item, index) => (
-                            <SidebarItem key={index} {...item} />
+                            <SidebarItem key={index} {...item} isActive={item.path === pathname} />
                         ))}
                     </List>
                     <Divider />
                     <List>
                         {others.map((item, index) => (
-                            <SidebarItem key={index} {...item} />
+                            <SidebarItem key={index} {...item} isActive={item.path === pathname} />
                         ))}
                     </List>
                 </Box>
