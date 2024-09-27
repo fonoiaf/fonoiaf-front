@@ -1,4 +1,4 @@
-import { Components, createTheme, PaletteOptions, TypographyOptions } from '@mui/material/styles';
+import { Components, createTheme, PaletteOptions, TypographyVariantsOptions } from '@mui/material/styles';
 import type { } from '@mui/x-data-grid/themeAugmentation';
 
 // const typography: TypographyOptions = {
@@ -16,7 +16,7 @@ import type { } from '@mui/x-data-grid/themeAugmentation';
 //     ].join(','),
 // }
 
-const typography: TypographyOptions = {
+const typography: TypographyVariantsOptions = {
     fontFamily: [
         'Playpen Sans',
         'sans-serif',
