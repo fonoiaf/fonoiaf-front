@@ -3,6 +3,11 @@ import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
+//https://www.npmjs.com/package/@fontsource/playpen-sans
+import '@fontsource/playpen-sans/300.css'
+import '@fontsource/playpen-sans/400.css'
+import '@fontsource/playpen-sans/500.css'
+import '@fontsource/playpen-sans/700.css'
 
 import Theme from '@/components/Theme'
 import type { Metadata, Viewport } from 'next'

@@ -1,5 +1,27 @@
-import { Components, createTheme, PaletteOptions } from '@mui/material/styles';
+import { Components, createTheme, PaletteOptions, TypographyOptions } from '@mui/material/styles';
 import type { } from '@mui/x-data-grid/themeAugmentation';
+
+// const typography: TypographyOptions = {
+//     fontFamily: [
+//         '-apple-system',
+//         'BlinkMacSystemFont',
+//         '"Segoe UI"',
+//         'Playpen Sans',
+//         '"Helvetica Neue"',
+//         'Arial',
+//         'sans-serif',
+//         '"Apple Color Emoji"',
+//         '"Segoe UI Emoji"',
+//         '"Segoe UI Symbol"',
+//     ].join(','),
+// }
+
+const typography: TypographyOptions = {
+    fontFamily: [
+        'Playpen Sans',
+        'sans-serif',
+    ].join(','),
+}
 
 const paletteLight: PaletteOptions = {
     mode: 'light',
@@ -52,6 +74,7 @@ const paletteDark: PaletteOptions = {
 const lightTheme = createTheme({
     palette: paletteLight,
     components: componentsLight,
+    typography: typography,
     shape: {
         borderRadius: 8
     }

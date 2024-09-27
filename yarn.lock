@@ -232,6 +232,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fontsource/playpen-sans@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/playpen-sans/-/playpen-sans-5.1.0.tgz#711720102099816be2c80e6d34bc240aabcbe4ac"
+  integrity sha512-WMYkTRafuC6SIpCPRZVf6B2SzBt6ypWlRIgRB6l+KunCSpNdSemQliRWmmGVEaLmcTzUHmoeAnpnJ5Hi4cF2wA==
+
 "@fontsource/roboto@^5.0.14":
   version "5.0.14"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-5.0.14.tgz#a3f67e47116309233ff3bba2c3613d2cf0302529"

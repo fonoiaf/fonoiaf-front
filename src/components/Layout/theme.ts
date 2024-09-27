@@ -1,5 +1,5 @@
-import { createTheme } from '@mui/material/styles';
 import { green, grey, red } from '@mui/material/colors';
+import { createTheme } from '@mui/material/styles';
 
 const rawTheme = createTheme({
   palette: {
@@ -29,7 +29,7 @@ const rawTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Work Sans', sans-serif",
+    fontFamily: "'Playpen Sans', sans-serif",
     fontSize: 14,
     fontWeightLight: 300, // Work Sans
     fontWeightRegular: 400, // Work Sans
@@ -40,7 +40,7 @@ const rawTheme = createTheme({
 const fontHeader = {
   color: rawTheme.palette.text.primary,
   fontWeight: rawTheme.typography.fontWeightMedium,
-  fontFamily: "'Roboto Condensed', sans-serif",
+  fontFamily: "'Playpen Sans', sans-serif",
   textTransform: 'uppercase',
 };
 
