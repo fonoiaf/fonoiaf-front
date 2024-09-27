@@ -1,5 +1,6 @@
 import { Box, Container, ImageList, ImageListItem, ImageListItemBar, Typography } from '@mui/material'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
     title: 'Fono IAF | Figuras',
@@ -80,11 +81,12 @@ export default function Figuras() {
                 <ImageList variant="masonry" cols={3} gap={8}>
                     {itemData.map((item) => (
                         <ImageListItem key={item.img}>
-                            <img
-                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                            <Image
                                 src={`${item.img}?w=248&fit=crop&auto=format`}
                                 alt={item.title}
-                                loading="lazy"
+                                width={248}
+                                height={248}
+                                layout="responsive"
                             />
                             <ImageListItemBar position="below" title={item.title + ' - ' + item.author} />
                         </ImageListItem>
