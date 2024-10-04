@@ -1,6 +1,7 @@
 'use client'
 
-import { Box, TablePagination } from '@mui/material'
+import { Box } from '@mui/material'
+// import { Box, TablePagination } from '@mui/material'
 import {
     DataGrid,
     GridColDef,
@@ -50,7 +51,7 @@ export default function Table({ rows, columns }: Props) {
                 initialState={{ ...initialState }}
                 slotProps={{ ...slotProps }}
             />
-
+{/* 
             <TablePagination
                 page={0}
                 component="div"
@@ -59,7 +60,7 @@ export default function Table({ rows, columns }: Props) {
                 onPageChange={handleChangePage}
                 rowsPerPageOptions={[5, 10, 25]}
                 onRowsPerPageChange={handleChangeRowsPerPage}
-            />
+            /> */}
         </Box>
     )
 }
